@@ -36,7 +36,7 @@ form {
     background-color: var(--White);
     position: absolute;
     top: 20%;
-    gap: 10px;
+    gap: 30px;
     border-radius: 20px;
     padding: 30px;
 }
@@ -96,6 +96,21 @@ input:focus {
     padding: 30px;
 }
 
+.Tip {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Tip-display {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+#result {
+    font-size: 30px;
+}
+
 .reset {
     width: 300px;
     background-color: var(--small-grayish-cyan);
@@ -104,4 +119,7 @@ input:focus {
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
+    padding: 0;
+    text-align: center;
+    margin-top: 130px;
 }
