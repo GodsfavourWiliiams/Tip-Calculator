@@ -43,8 +43,38 @@ input {
     background-color: var(--lit-grayish-cyan);
     outline: none;
     padding: 15px;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
 }
 
-.bill-display {
+.bill-display,
+.number-display {
     width: 330px;
+}
+
+.custom {
+    width: 100px;
+}
+
+.tips-percentage {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+}
+
+.Tips {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.display {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
 }
