@@ -1,5 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --Very-dark-cyan: hsl(183, 100%, 15%);
+        --Dark-grayish-cyan: hsl(186, 14%, 43%);
+        --medium-grayish-cyan: hsl(184, 14%, 56%);
+        --Light-grayish-cyan: hsl(185, 41%, 84%);
+        --lit-grayish-cyan: hsl(189, 41%, 97%);
+        --White: hsl(0, 0%, 100%);
+        --body-font-2: 'Volkhov';
+        --body-font-3: 'noto sans jp';
+        --body-font-4: 'open sans';
+        --normal-font-size: 0.93rem;
+        --small-font-size: 0.81rem;
+    }
+    
+    body {
+        background-color: var(--Light-grayish-cyan);
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--White);
+        position: relative;
+        top: 40%;
+    }
