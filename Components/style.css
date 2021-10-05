@@ -11,7 +11,7 @@
     --medium-grayish-cyan: hsl(184, 14%, 56%);
     --Light-grayish-cyan: hsl(185, 41%, 84%);
     --lit-grayish-cyan: hsl(189, 41%, 97%);
-    --small-grayish-cyan: hsl(185, 66%, 69%);
+    --small-grayish-cyan: hsl(172, 56%, 51%);
     --bordergreen: rgb(22, 189, 152);
     --White: hsl(0, 0%, 100%);
     --body-font-1: 'Space Mono';
@@ -45,7 +45,7 @@ form {
 }
 
 input {
-    height: 40px;
+    height: 50px;
     border-radius: 5px;
     border: none;
     background-color: var(--lit-grayish-cyan);
@@ -62,11 +62,11 @@ input:focus {
 }
 
 .bill-display,
-.number-display {
+#number-display {
     width: 330px;
 }
 
-.custom {
+#custom {
     width: 100px;
     font-size: 18px;
     padding: 15px;
@@ -76,7 +76,11 @@ input:focus {
     margin: 30px 0px 30px 0px;
 }
 
-.tips-percentage {
+#FivePer,
+#TenPer,
+#FifteenPer,
+#TwentyFivePer,
+#FiftyPer {
     background-color: var(--Very-dark-cyan);
     border-radius: 4px;
     display: inline-flex;
@@ -99,6 +103,11 @@ input:focus {
     padding: 30px;
 }
 
+#result-Amount,
+#result {
+    color: var(--small-grayish-cyan);
+}
+
 .Tip {
     display: flex;
     justify-content: space-between;
@@ -110,7 +119,8 @@ input:focus {
     margin-bottom: 8px;
 }
 
-#result {
+#result,
+#result-Amount {
     font-size: 30px;
 }
 
@@ -125,4 +135,43 @@ input:focus {
     padding: 0;
     text-align: center;
     margin-top: 130px;
+}
+
+.reset:active {
+    background-color: var(--Light-grayish-cyan);
+    border: none;
+}
+
+@media only screen and (max-width: 850px) {
+    /* For smaller screen laptops: */
+    form {
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    /* For mobile tabs: */
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        gap: 20px;
+        padding: 20px;
+    }
+    .display {
+        background-color: var(--Very-dark-cyan);
+        border-radius: 15px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
 }
