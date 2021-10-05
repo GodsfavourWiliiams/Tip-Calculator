@@ -157,11 +157,11 @@ input:focus {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        top: 50%;
+        top: 28em;
         left: 50%;
         transform: translate(-50%, -50%);
         gap: 20px;
-        padding: 20px;
+        padding: 15px;
     }
     .display {
         background-color: var(--Very-dark-cyan);
@@ -173,9 +173,10 @@ input:focus {
         grid-template-columns: repeat(2, 50%);
     }
     #custom {
-        width: 100px;
+        width: 140px;
         font-size: 18px;
         padding: 15px;
+        text-align: center;
     }
     .select-tips {
         margin: 30px 0px 30px 0px;
@@ -196,9 +197,9 @@ input:focus {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
+    form {
+        padding: 30px 10px;
     }
 }
