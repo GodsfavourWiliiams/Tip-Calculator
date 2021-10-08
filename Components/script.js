@@ -18,7 +18,7 @@ function calc() {
 
     }
     let SumTotal = inputVal.value / inputVals.value
-    document.getElementById('result-Amounts').textContent = SumTotal.toFixed(1);
+    document.getElementById('result-Amounts').textContent = SumTotal.toFixed(2);
 
     if (inputVals.value == 0) {
         document.getElementById('error-messages').textContent = "Sorry please input a Value";
