@@ -57,7 +57,8 @@ input {
     text-align: right;
 }
 
-#error-message {
+#error-message,
+#error-messages {
     color: red;
 }
 
@@ -138,26 +139,7 @@ input:focus {
     cursor: pointer;
     padding: 0;
     text-align: center;
-    /* margin-top: 130px; */
-}
-
-.resets {
-    background-color: var(--small-grayish-cyan);
-    color: var(--Dark-grayish-cyan);
-    height: 45px;
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 0;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    width: 300px;
-    transition: ease-out 2ms;
-}
-
-.resets:active {
-    background-color: aqua;
+    margin-top: 130px;
 }
 
 #reset:active {

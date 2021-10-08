@@ -11,18 +11,17 @@ let Custom = document.getElementById('Custom');
 
 
 
-function sum() {
+function calc() {
     if (inputVal.value == 0) {
         document.getElementById('error-message').textContent = "Sorry please input a Value";
-        // document.getElementById('reset').ariaDisabled;
     } else {
 
     }
-
-    document.getElementById('result-Amounts').textContent = inputVal.value / inputVals.value
+    let SumTotal = inputVal.value / inputVals.value
+    document.getElementById('result-Amounts').textContent = SumTotal.toFixed(1);
 
     if (inputVals.value == 0) {
-        document.getElementById('error-message').textContent = "Sorry please input a Value";
+        document.getElementById('error-messages').textContent = "Sorry please input a Value";
     } else {
         //do this
     }
