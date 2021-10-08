@@ -26,6 +26,7 @@
             <p class="header">Bill</p>
             <div class="screen">
                 <input type="text" id="bill-display">
+                <p id="error-message"></p>
             </div>
             <div class="select-tips">
                 <p>Select Tip %</p>
@@ -41,7 +42,8 @@
 
             <p class="header-2 ">Number of People</p>
             <div class="screen-2 ">
-                <input type="text " id="number-display ">
+                <input type="text" id="number-displays">
+                <p id="error-message"></p>
             </div>
         </div>
         <div class="display ">
@@ -51,7 +53,7 @@
                     <span class="tip-text">/ person</span>
                 </div>
                 <div id="Tip-Amt-display ">
-                    <span id=result-Amount>$</span>
+                    <span id=result-Amount>$ <span id="result-Amounts">0.00</span></span>
                 </div>
             </div>
 
@@ -61,11 +63,11 @@
                     <span class="tip-text">/ person</span>
                 </div>
                 <div id="Tip-Amt-display ">
-                    <span id="result">$</span>
+                    <span id="result">$ <span id="results" >0.00</span></span>
                 </div>
             </div>
-
-            <input type="Reset" class="reset ">
+            <input value="SUM" onclick="sum()" type="button" class="resets ">
+            <input type="Reset" id="reset">
         </div>
     </form>
 
