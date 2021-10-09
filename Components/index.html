@@ -21,37 +21,42 @@
 </head>
 
 <body>
+    <div class="header">
+        <img src="/Assets/images/logo.svg" alt="">
+    </div>
     <form>
         <div class="section-1">
             <p class="header">Bill</p>
             <div class="screen">
-                <input type="text" id="bill-display" onkeyup="calc() ">
+                <input type="text" id="bill-display" onkeyup="calc() " placeholder="0">
                 <img src="/Assets/images/icon-dollar.svg" class="icon" alt="">
                 <p id="error-message"></p>
             </div>
             <div class="select-tips">
                 <p>Select Tip %</p>
                 <div class="Tips">
-                    <span id="FivePer">5%</span>
-                    <span id="TenPer">10%</span>
-                    <span id="FifteenPer">15%</span>
-                    <span id="TwentyFivePer"> 25%</span>
-                    <span id="FifteenPer"> 50%</span>
-                    <input id="custom" placeholder="Custom">
+                    <input onclick="point1()" type="button" value="5%" id="FivePer">
+                    <input onclick="point2()" id="TenPer" value="10%" type="button">
+                    <input onclick="point3()" id="FifteenPer" value="15%" type="button">
+                    <input onclick="point4()" id="TwentyFivePer" type="button" value="25%">
+                    <input onclick="point5()" id="FiftyPer" value="50%" type="button">
+                    <input id="custom" placeholder="Custom" onkeyup="calc() ">
                 </div>
             </div>
 
-            <p class="header-2 ">Number of People</p>
-            <div class="screen-2 ">
-                <input type="text" id="number-displays" onkeyup="calc() ">
-                <img src="/Assets/images/icon-person.svg" class="icon" alt="">
+            <div class="header-num">
+                <p class="header-2 ">Number of People</p>
                 <p id="error-messages"></p>
+            </div>
+            <div class="screen-2 ">
+                <input type="text" id="number-displays" onkeyup="calc() " placeholder="0">
+                <img src="/Assets/images/icon-person.svg" class="icon" alt="">
             </div>
         </div>
         <div class="display ">
             <div class="Tip ">
                 <div class="Tip-display">
-                    <span class="tip-text">Tip Amount</span>
+                    <span class="tip-head">Tip Amount</span>
                     <span class="tip-text">/ person</span>
                 </div>
                 <div id="Tip-Amt-display ">
@@ -61,14 +66,14 @@
 
             <div class="Tip ">
                 <div class="Tip-display ">
-                    <span class="tip-text">Total</span>
+                    <span class="tip-head">Total</span>
                     <span class="tip-text">/ person</span>
                 </div>
                 <div id="Tip-Amt-display ">
                     <span id="result">$ <span id="results" >0.00</span></span>
                 </div>
             </div>
-            <input type="Reset" id="reset">
+            <input type="submit" id="reset" value="Reset">
         </div>
     </form>
 

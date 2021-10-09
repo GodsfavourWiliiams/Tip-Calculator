@@ -1,219 +1,287 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
- :root {
-    --Very-dark-cyan: hsl(183, 100%, 15%);
-    --Dark-grayish-cyan: hsl(186, 14%, 43%);
-    --medium-grayish-cyan: hsl(184, 14%, 56%);
-    --Light-grayish-cyan: hsl(185, 41%, 84%);
-    --lit-grayish-cyan: hsl(189, 41%, 97%);
-    --small-grayish-cyan: hsl(172, 56%, 51%);
-    --bordergreen: rgb(22, 189, 152);
-    --White: hsl(0, 0%, 100%);
-    --body-font-1: 'Space Mono';
-    --normal-font-size: 16px;
-    --small-font-size: 18px;
-}
-
-body {
-    background-color: var(--Light-grayish-cyan);
-    font-family: var(--body-font-1);
-    font-weight: 700;
-    color: var(--medium-grayish-cyan);
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-form {
-    display: flex;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--White);
-    position: absolute;
-    gap: 30px;
-    border-radius: 20px;
-    padding: 30px;
-    margin: auto;
-}
-
-input {
-    height: 50px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--lit-grayish-cyan);
-    outline: none;
-    padding: 20px;
-    color: var(--Very-dark-cyan);
-    font-weight: 700;
-    font-size: 22px;
-    text-align: right;
-}
-
-.icon {
-    position: relative;
-    top: -2em;
-    left: 1em;
-}
-
-#error-message,
-#error-messages {
-    color: red;
-}
-
-input:focus {
-    border: 2px solid var(--bordergreen);
-}
-
-.bill-display,
-#number-display {
-    width: 330px;
-}
-
-#custom {
-    width: 100px;
-    font-size: 18px;
-    padding: 15px;
-}
-
-.select-tips {
-    margin: 10px 0px 10px 0px;
-}
-
-#FivePer,
-#TenPer,
-#FifteenPer,
-#TwentyFivePer,
-#FiftyPer {
-    background-color: var(--Very-dark-cyan);
-    border-radius: 4px;
-    display: inline-flex;
-    align-items: center;
-    width: 100px;
-    height: 40px;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.Tips {
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    gap: 20px;
-}
-
-.display {
-    background-color: var(--Very-dark-cyan);
-    border-radius: 15px;
-    padding: 30px;
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-}
-
-#result-Amount,
-#result {
-    color: var(--small-grayish-cyan);
-}
-
-.Tip {
-    display: flex;
-    justify-content: space-between;
-}
-
-.Tip-display {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 8px;
-}
-
-#result,
-#result-Amount {
-    font-size: 30px;
-}
-
-#reset {
-    width: 300px;
-    background-color: var(--small-grayish-cyan);
-    color: var(--Dark-grayish-cyan);
-    height: 45px;
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 0;
-    text-align: center;
-    margin-top: 100px;
-}
-
-#reset:active {
-    background-color: aqua;
-    border: none;
-}
-
-@media only screen and (max-width: 850px) {
-    /* For smaller screen laptops: */
-    form {
-        gap: 20px;
-        padding: 20px;
-    }
-}
-
-@media only screen and (max-width: 769px) {
-    /* For mobile tabs: */
-    form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        top: 28em;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        gap: 20px;
-        padding: 15px;
-    }
-    .display {
-        background-color: var(--Very-dark-cyan);
-        border-radius: 15px;
-        padding: 20px;
-    }
-    .Tips {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-    }
-    #custom {
-        width: 140px;
-        font-size: 18px;
-        padding: 15px;
-        text-align: center;
-    }
-    .select-tips {
-        margin: 30px 0px 30px 0px;
-    }
-    #FivePer,
-    #TenPer,
-    #FifteenPer,
-    #TwentyFivePer,
-    #FiftyPer {
-        background-color: var(--Very-dark-cyan);
-        border-radius: 4px;
-        display: inline-flex;
-        align-items: center;
-        width: 140px;
-        height: 40px;
-        justify-content: center;
-        cursor: pointer;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    /* For mobile phones: */
-    form {
-        padding: 30px 10px;
-    }
-}
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --Very-dark-cyan: hsl(183, 100%, 15%);
+            --Dark-grayish-cyan: hsl(186, 14%, 43%);
+            --medium-grayish-cyan: hsl(184, 14%, 56%);
+            --Light-grayish-cyan: hsl(185, 41%, 84%);
+            --lit-grayish-cyan: hsl(189, 41%, 97%);
+            --small-grayish-cyan: hsl(172, 56%, 51%);
+            --bordergreen: rgb(22, 189, 152);
+            --White: hsl(0, 0%, 100%);
+            --body-font-1: 'Space Mono';
+            --normal-font-size: 16px;
+            --small-font-size: 18px;
+        }
+        
+        body {
+            background-color: var(--Light-grayish-cyan);
+            font-family: var(--body-font-1);
+            font-weight: 700;
+            color: var(--medium-grayish-cyan);
+        }
+        
+        .header {
+            text-align: center;
+            position: relative;
+            top: 10%;
+        }
+        
+        p {
+            margin-bottom: 10px;
+        }
+        
+        form {
+            display: flex;
+            align-items: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--White);
+            position: absolute;
+            gap: 30px;
+            border-radius: 20px;
+            padding: 30px;
+            margin: auto;
+        }
+        
+        input {
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            background-color: var(--lit-grayish-cyan);
+            outline: none;
+            padding: 20px;
+            color: var(--Very-dark-cyan);
+            font-weight: 700;
+            font-size: 22px;
+            text-align: right;
+        }
+        
+        .icon {
+            position: relative;
+            top: -2em;
+            left: 1em;
+        }
+        
+        #error-message,
+        #error-messages {
+            color: red;
+        }
+        
+        input:focus {
+            border: 2px solid var(--bordergreen);
+        }
+        
+        .Tips input {
+            color: white;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+            padding: 0;
+        }
+        
+        #bill-display,
+        #number-displays {
+            width: 350px;
+        }
+        
+        .header-num {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #FivePer:focus {
+            background-color: aqua;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+            padding: 0;
+        }
+        
+        #TenPer:focus {
+            background-color: aqua;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+            padding: 0;
+        }
+        
+        #FifteenPer:focus {
+            background-color: aqua;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+            padding: 0;
+        }
+        
+        #TwentyFivePer:focus {
+            background-color: aqua;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+            padding: 0;
+        }
+        
+        #FiftyPer:focus {
+            background-color: aqua;
+            color: white;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+            padding: 0;
+        }
+        
+        #custom {
+            width: 100px;
+            font-size: 18px;
+            padding: 15px;
+        }
+        
+        #custom:focus {
+            border: 2px var(--bordergreen) solid;
+        }
+        
+        .select-tips {
+            margin: 10px 0px 10px 0px;
+        }
+        
+        #FivePer,
+        #TenPer,
+        #FifteenPer,
+        #TwentyFivePer,
+        #FiftyPer {
+            background-color: var(--Very-dark-cyan);
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            width: 100px;
+            height: 40px;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .Tips {
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            gap: 20px;
+        }
+        
+        .display {
+            background-color: var(--Very-dark-cyan);
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+        }
+        
+        #result-Amount,
+        #result {
+            color: var(--small-grayish-cyan);
+        }
+        
+        .Tip {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .Tip-display {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 8px;
+        }
+        
+        .tip-head {
+            color: white;
+        }
+        
+        #result,
+        #result-Amount {
+            font-size: 30px;
+        }
+        
+        #reset {
+            width: 300px;
+            background-color: var(--small-grayish-cyan);
+            color: var(--Dark-grayish-cyan);
+            height: 45px;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 0;
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        #reset:active {
+            background-color: aqua;
+            border: none;
+        }
+        
+        @media only screen and (max-width: 850px) {
+            /* For smaller screen laptops: */
+            form {
+                gap: 20px;
+                padding: 20px;
+            }
+        }
+        
+        @media only screen and (max-width: 769px) {
+            /* For mobile tabs: */
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                top: 38em;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                gap: 20px;
+                padding: 15px;
+            }
+            .display {
+                background-color: var(--Very-dark-cyan);
+                border-radius: 15px;
+                padding: 20px;
+            }
+            .Tips {
+                display: grid;
+                grid-template-columns: repeat(2, 50%);
+            }
+            #custom {
+                width: 140px;
+                font-size: 18px;
+                padding: 15px;
+                text-align: center;
+            }
+            .select-tips {
+                margin: 30px 0px 30px 0px;
+            }
+            #FivePer,
+            #TenPer,
+            #FifteenPer,
+            #TwentyFivePer,
+            #FiftyPer {
+                background-color: var(--Very-dark-cyan);
+                border-radius: 4px;
+                display: inline-flex;
+                align-items: center;
+                width: 140px;
+                height: 40px;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+        
+        @media only screen and (max-width: 400px) {
+            /* For mobile phones: */
+            form {
+                padding: 30px 10px;
+            }
+        }
