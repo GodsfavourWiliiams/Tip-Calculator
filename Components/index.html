@@ -1,85 +1,81 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/Assets/images/logo.svg">
-    <link rel="stylesheet" href="style.css">
-    <title>Tip Calculator app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/Assets/images/logo.svg" />
 
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-        
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Tip calculator app</title>
+
 </head>
 
 <body>
-    <div class="header">
-        <img src="/Assets/images/logo.svg" alt="">
+    <!-- header -->
+    <nav>
+        <h1 class="title">Spli <br />tter</h1>
+    </nav>
+
+    <main class="calculator">
+        <article class="main">
+            <div class="main-bill">
+                <h4>Bill</h4>
+                <small class="bill-error"></small>
+                <div class="input">
+                    <img src="/Assets/images/icon-dollar.svg" alt="icon-dollar" class="dollor" />
+                    <label for="bill"></label>
+                    <input type="text" class="bill" id="bill" />
+                </div>
+            </div>
+            <div class="main-tip">
+                <h4>Select Tip %</h4>
+                <div class="tips">
+                    <button class="btn tip-1" value="5">5%</button>
+                    <button class="btn tip-2" value="10">10%</button>
+                    <button class="btn tip-3" value="15">15%</button>
+                    <button class="btn tip-4" value="25">25%</button>
+                    <button class="btn tip-5" value="50">50%</button>
+                    <form>
+                        <label for="custom-tip"></label>
+                        <input type="text" name="custom-tip" id="custom-tip" placeholder="Custom" />
+                    </form>
+                </div>
+            </div>
+
+            <div class="main-people">
+                <h4>Number of People</h4>
+                <small class="person-error"></small>
+                <div class="input">
+                    <img src="/Assets/images/icon-person.svg" alt="icon-person" class="user" />
+                    <label for="persons"></label>
+                    <input type="number" class="select-persons" id="persons" />
+                </div>
+            </div>
+        </article>
+        <article class="display">
+            <div class="display-tip">
+                <div class="tip-text">
+                    <h3>Tip Amount</h3>
+                    <h4>/ person</h4>
+                </div>
+                <div class="tip-amount">$0.00</div>
+            </div>
+            <div class="display-total">
+                <div class="total-text">
+                    <h3>Total</h3>
+                    <h4>/ person</h4>
+                </div>
+                <div class="total-amount">$0.00</div>
+            </div>
+            <button type="reset" class="btn-reset">Reset</button>
+        </article>
+    </main>
+
     </div>
-    <form>
-        <div class="section-1">
-            <p class="header">Bill</p>
-            <div class="screen">
-                <input type="text" id="bill-display" onkeyup="calc() " placeholder="0">
-                <img src="/Assets/images/icon-dollar.svg" class="icon" alt="">
-                <p id="error-message"></p>
-            </div>
-            <div class="select-tips">
-                <p>Select Tip %</p>
-                <div class="Tips">
-                    <input onclick="point1()" type="button" value="5%" id="FivePer">
-                    <input onclick="point2()" id="TenPer" value="10%" type="button">
-                    <input onclick="point3()" id="FifteenPer" value="15%" type="button">
-                    <input onclick="point4()" id="TwentyFivePer" type="button" value="25%">
-                    <input onclick="point5()" id="FiftyPer" value="50%" type="button">
-                    <input id="custom" placeholder="Custom" onkeyup="calc() ">
-                </div>
-            </div>
-
-            <div class="header-num">
-                <p class="header-2 ">Number of People</p>
-                <p id="error-messages"></p>
-            </div>
-            <div class="screen-2 ">
-                <input type="text" id="number-displays" onkeyup="calc() " placeholder="0">
-                <img src="/Assets/images/icon-person.svg" class="icon" alt="">
-            </div>
-        </div>
-        <div class="display ">
-            <div class="Tip ">
-                <div class="Tip-display">
-                    <span class="tip-head">Tip Amount</span>
-                    <span class="tip-text">/ person</span>
-                </div>
-                <div id="Tip-Amt-display ">
-                    <span id=result-Amount>$ <span id="result-Amounts">0.00</span></span>
-                </div>
-            </div>
-
-            <div class="Tip ">
-                <div class="Tip-display ">
-                    <span class="tip-head">Total</span>
-                    <span class="tip-text">/ person</span>
-                </div>
-                <div id="Tip-Amt-display ">
-                    <span id="result">$ <span id="results" >0.00</span></span>
-                </div>
-            </div>
-            <input type="submit" id="reset" value="Reset">
-        </div>
-    </form>
-
-    <!-- <div class="attribution ">
-        Challenge by <a href=" " target="_blank ">Frontend Mentor</a>. Coded by <a href="# ">Williams Godsfavoour</a>.
-    </div> -->
     <script src="script.js"></script>
 </body>
 
