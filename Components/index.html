@@ -23,12 +23,15 @@
     <main class="calculator">
         <article class="main">
             <div class="main-bill">
-                <h4>Bill</h4>
-                <small class="bill-error"></small>
+                <div class="number-header">
+                    <h4>Bill</h4>
+                    <div class="bill-error small"></div>
+                </div>
+
                 <div class="input">
                     <img src="/Assets/images/icon-dollar.svg" alt="icon-dollar" class="dollor" />
                     <label for="bill"></label>
-                    <input type="text" class="bill" id="bill" />
+                    <input type="text" class="bill" id="bill" placeholder="0" />
                 </div>
             </div>
             <div class="main-tip">
@@ -41,42 +44,44 @@
                     <button class="btn tip-5" value="50">50%</button>
                     <form>
                         <label for="custom-tip"></label>
-                        <input type="text" name="custom-tip" id="custom-tip" placeholder="Custom" />
+                        <input type="text" name="custom-tip" id="custom-tip" placeholder="Custom" onkeyup='customs()' />
                     </form>
                 </div>
             </div>
 
-            <div class="main-people">
-                <h4>Number of People</h4>
-                <small class="person-error"></small>
-                <div class="input">
-                    <img src="/Assets/images/icon-person.svg" alt="icon-person" class="user" />
-                    <label for="persons"></label>
-                    <input type="number" class="select-persons" id="persons" />
+            <div class="main-people ">
+                <div class="number-header ">
+                    <h4>Number of People</h4>
+                    <div class="person-error small "></div>
+                </div>
+                <div class="input ">
+                    <img src="/Assets/images/icon-person.svg " alt="icon-person " class="user " />
+                    <label for="persons "></label>
+                    <input type="text " class="select-persons " id="persons " placeholder="0 " />
                 </div>
             </div>
         </article>
-        <article class="display">
-            <div class="display-tip">
-                <div class="tip-text">
+        <div class="display ">
+            <div class="display-tip ">
+                <div class="tip-text ">
                     <h3>Tip Amount</h3>
                     <h4>/ person</h4>
                 </div>
-                <div class="tip-amount">$0.00</div>
+                <div class="tip-amount ">$0.00</div>
             </div>
-            <div class="display-total">
-                <div class="total-text">
+            <div class="display-total ">
+                <div class="total-text ">
                     <h3>Total</h3>
                     <h4>/ person</h4>
                 </div>
-                <div class="total-amount">$0.00</div>
+                <div class="total-amount ">$0.00</div>
             </div>
-            <button type="reset" class="btn-reset">Reset</button>
-        </article>
+            <button type="reset " class="btn-reset ">Reset</button>
+        </div>
     </main>
 
     </div>
-    <script src="script.js"></script>
+    <script src="script.js "></script>
 </body>
 
 </html>

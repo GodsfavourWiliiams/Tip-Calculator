@@ -1,5 +1,3 @@
-"use strict";
-
 // UI elements
 const bill = document.querySelector(".bill");
 const labelSelectTip = document.querySelectorAll(".btn");
@@ -30,7 +28,7 @@ function showError(message, type) {
     setTimeout(function disApear() {
         message.textContent = "";
         type.classList.remove("error");
-    }, 1000);
+    }, 2000);
 }
 
 // remove background color
@@ -89,13 +87,10 @@ labelSelectTip.forEach((btn) =>
 );
 
 // event for custom tip
-document.querySelector("form").addEventListener("submit", function(e) {
-    // prevent default reload
-    e.preventDefault();
-
-    // calcTip
+function customs() {
     calcTip(customTip);
-});
+}
+
 
 // event for reset
 btnReset.addEventListener("click", init);

@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 
 /* Colors */
 
@@ -39,7 +33,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: "Space Mono", monospace;
+    font-family: "Space Mono";
 }
 
 nav {
@@ -63,7 +57,7 @@ img {
     display: block;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     .calculator {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -130,23 +124,15 @@ img {
 
 .display {
     background-color: var(--Very-dark-cyan);
-    padding: 0 1.5rem;
-    padding-top: 4rem;
     border-radius: 1rem;
     position: relative;
-}
-
-@media screen and (max-width: 600px) {
-    .display {
-        margin-top: 4rem;
-    }
+    padding: 2em;
 }
 
 .display-tip,
 .display-total {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .tip-text {
@@ -182,13 +168,16 @@ img {
     width: 100%;
     font-size: 1.6rem;
     text-transform: uppercase;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    margin-top: 10rem;
     outline: none;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 120px;
+}
+
+.btn-reset {
+    height: 45px;
+    bottom: 0;
 }
 
 .btn-reset:hover {
@@ -198,20 +187,21 @@ img {
 
 /* bill, tip and people inputs */
 
-input[type="number"] {
+input[type="text"] {
     text-align: right;
 }
 
 input {
     font-size: 2.4rem;
     background-color: var(--Light-grayish-cyan1);
-    color: var(--Dark-grayish-cyan1);
+    color: black;
     width: 100%;
-    padding: 0.85rem;
+    padding: 2rem;
     outline: none;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    text-align: right;
+    height: 50px;
 }
 
 input::placeholder {
@@ -231,13 +221,18 @@ input:focus {
 
 /* small: show error */
 
-small {
-    float: right;
-    color: brown;
+.small {
+    color: red;
     font-size: 1.4rem;
     letter-spacing: 1px;
 }
 
+.number-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .error {
-    border: 2px solid brown;
+    border: 2px solid red;
 }
